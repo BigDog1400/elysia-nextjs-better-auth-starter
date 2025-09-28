@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "check-types": "tsc --noEmit -p tsconfig.json",
+    "compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
+    "dev": "bun run --port=4002 --hot src/index.ts",
+    "start": "bun run dist/index.js"
+  },
+  "dependencies": {
+    "@wara/api-contract": "workspace:*",
+    "@wara/server-core": "workspace:*"
+  },
+  "devDependencies": {
+    "bun-types": "^1.2.23",
+    "tsdown": "^0.5.8",
+    "typescript": "^5.7.2"
+  }
+}

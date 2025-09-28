@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"],
+			"prisma": ["node_modules/prisma"]
+		},
+		"types": ["bun-types"],
+		"jsx": "react-jsx",
+		"composite": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "./.tsbuild",
+		"rootDir": "./src",
+		"incremental": true,
+		"tsBuildInfoFile": "./.tsbuild/server.tsbuildinfo"
+	}
+}

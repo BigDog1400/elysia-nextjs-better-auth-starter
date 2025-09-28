@@ -1,0 +1,26 @@
+{
+  "name": "wara",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F server dev",
+    "db:push": "turbo -F @wara/server-core db:push",
+    "db:studio": "turbo -F @wara/server-core db:studio",
+    "db:generate": "turbo -F @wara/server-core db:generate",
+    "db:migrate": "turbo -F @wara/server-core db:migrate"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
+  "packageManager": "bun@1.2.4"
+}
